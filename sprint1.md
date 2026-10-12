@@ -1,0 +1,77 @@
+# Sprint 1 - Planeación
+
+El equipo (Infotech-A) plantea la siguiente documentación como una planeación y delimitamiento preeliminar al desarrollo del sistema (Mastertek StreamGrid) requerido por el cliente (Mastertek Geosystems).
+
+## Introducción
+
+El cliente requiere de una administración más centralizada de tres áreas principales
+
+  - Modificación en vivo de documentos.
+  - Centralización de consulta para cámaras de seguridad.
+  - Acceso remoto a puertos USB para hacer uso de llaves de software.
+
+Nuestro enfoque actual será en el área de cámaras de seguridad.
+
+El sistema de videovigilancia del cliente cuenta con más de una ubicación y con sistemas de software nativamente distinto; establecer una sola aplicación web que permita acceder a la transmisión en vivo
+de la videovigilancia al igual que el almacenamiento longevo de grabaciones de seguridad consta unificar estas tecnologías distintas en un solo "hub". A esta centralización y toda la configuración de 
+software/hardware que conlleva se le denominará "Mastertek CCTV".
+
+## Requisitos
+
+A través de un proceso de recopilación de datos preeliminar realizado previo a este primer sprint, se han delimitado los siguientes requisitos funcionales basados en entrevistas y observación con el cliente.
+
+  - **RF-01** Acceso a una sola aplicación que permita ver la transmisión en vivo de los sistemas de videovigilancia, al igual que las grabaciones guardadas en memoria física.
+  - **RF-02** Permisos de acceso y consulta de datos CCTV administrables por un solo usuario maestro (admin).
+  - **RF-03** El sistema centralizado deberá poder validar los permisos asignados por el usuario admin para permitir el acceso solo a aquellos que tengan las credenciales permitidas.
+  - **RF-04** El sistema deberá guardar los datos de acceso en una base de datos local.
+  - **RF-05** El sistema deberá guardar los datos de grabación en una base de datos local.
+  - **RF-06** La base de datos deberá estar físicamente apartada de cualquiera de los sitios donde haya videovigilancia.
+  - **RF-07** La transmisión de video no se puede interrumpir, ni del lado del transmisor como del receptor.
+  - **RF-08** La base de datos de grabación deberá de guardar un mínimo de 7 días de antigüedad.
+
+Se han delimitado también los siguientes requisitos no funcionales.
+
+  - **NF-01** El sistema debe de dejar disponible el espacio para añadir 4 cámaras de seguridad adicionales al hub de grabación. 
+  - **NF-02** El sistema debe de tardar menos de 10 segundos en acceder tanto a la grabación permanente de video como a la transmisión en vivo.
+  - **NF-03** El sistema no debe de tener muchas capas de acción, los empleados tienen que poder acceder al hub CCTV sin más pasos de los que requiere una verificación 2FA.
+
+## Casos de uso
+
+  Los siguientes casos de uso son los que se han identificado cómo los más comunes o más probables en el caso del portal web.
+
+  - **CU-01** Consultar registro de auditoría: Permite acceder a la whitelist y modificar los permisos de cada ususario de la whitelist.
+    - **Principal actor:** Admin
+  - **CU-02** Asignar permisos: Permite modificar las acciones permitidas a partir de sus credenciales en el registro de auditoría.
+    - **Principal actor:** Admin
+  - **CU-03** Gestionar empleados: Permite modificar las credenciales cuyo acceso será permitido a la hora de intentar ingresar al portal.
+    - **Principal actor:** Admin
+  - **CU-04** Descargar grabación: Permite descargar los datos de grabación de la base de datos hacia un almacenamiento local.
+    - **Principal actor:** Empleado autorizado
+  - **CU-06** Consultar grabaciones: Permite revisar las grabaciones de la base de datos de grabación.
+    - **Principal actor:** Empleado autorizado
+  - **CU-07** Controlar PTZ: Permite acceder y usar el control PTZ (Pan, Tilt, Zoom) de las cámaras que lo permitan.
+    - **Principal actor:** Empleado autorizado
+  - **CU-08** Ver cámaras en vivo: Permite revisar la transmisión de video en vivo del hub de vigilancia.
+    - **Principal actor:** Empleado autorizado
+  - **CU-09** Validar permisos del usuario: Permite asegurar con certeza que el usuario que está intentando acceder al portal está autorizado tanto en la whitelist como en el proxy.
+    - **Principal actor:** Proxy
+  - **CU-10** Iniciar sesión: Permite, al ingresar credenciales (usuario, contraseña, 2FA), ingresar al sitio web.
+    - **Principal actor:** Empleado autorizado
+
+## Modelo entidad-relación (ER)
+
+## Historias de usuario
+
+  Se presentan a continuación las historias de usuario que se pudieron recopilar al realizar entrevistas.
+
+  -* *Como administrador, quiero poder acceder al sistema de manera simple para no gastar tiempo útil en cambiar de aplicaciones* *
+  -* *Como administrador, quiero tener la posibilidad de añadir 4 cámaras de seguridad adicionales al sistema de videovigilancia para expandir mi alcance de vigilancia a otras propiedades* *
+  -* *Como administrador, quiero que mis empleados tengan la capacidad de usar el sistema sin dificultad para que el acceso a videovigilancia no esté centralizado en una sola persona* *
+
+## Criterios de aceptación
+
+## Responsables
+
+## Metas
+
+## Requisitos de seguridad
