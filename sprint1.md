@@ -81,6 +81,12 @@ Se han delimitado también los siguientes requisitos no funcionales.
 
 
 ## Metas
+- Centralizar el sistema de videovigilancia: Integrar y unificar las tecnologías de transmisión en vivo y almacenamiento de las distintas sucursales en un único hub central.
+- Asegurar la continuidad operativa: Garantizar la transmisión ininterrumpida de video, tanto desde el lado del transmisor como del receptor.
+- Garantizar el almacenamiento local y la retención de datos: Implementar una base de datos local físicamente separada de las ubicaciones monitoreadas, asegurando la retención de grabaciones por un periodo mínimo de 7 días de antigüedad.
+- Optimizar y simplificar el acceso: Ofrecer un acceso seguro, rápido y sencillo (en menos de 10 segundos y sin superar las verificaciones de seguridad como 2FA), permitiendo a los empleados autorizados consultar cámaras y grabaciones sin complicaciones.
+- Escalabilidad del sistema: Prever y dejar disponible el espacio necesario para añadir hasta 4 cámaras adicionales al hub de grabación en el futuro.
+- Gestión centralizada de accesos y seguridad: Permitir la administración de permisos mediante un usuario maestro (admin) y un proxy de validación, garantizando que únicamente el personal autorizado en la lista blanca pueda ingresar y operar en el portal. 
 
 ## Requisitos de seguridad
 Siguiendo con la recopilación de datos tambien tenemos presentes los siguientes requisitos de seguridad:
