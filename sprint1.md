@@ -72,6 +72,20 @@ Se han delimitado también los siguientes requisitos no funcionales.
 
 ## Responsables
 
+  los roles definidos para el proyecto sera:
+  - Mauricio Ramirez de la Rosa: especialista de seguridad, analista de requerimientos
+  - Diego Sebastian Medina Lara: desarrollador frontend
+  - Etzael Esquivel Luna: desarrollador backend
+  - Dania Yaretzi Gómez Zermeño: diseñador de base de datos
+  - Alejandro González García: desarrollador fullstack
+
+
 ## Metas
 
 ## Requisitos de seguridad
+Siguiendo con la recopilación de datos tambien tenemos presentes los siguientes requisitos de seguridad:
+  - **RS-N1** el sistema debe contar con validaciónes basicas de I/O para evitar inyecciones SQL, o corrupción de datos.
+  - **RS_N2** el sistema debe guardar los videos grabados en un servidor NAS casero.
+  - **RS_N3** El sistema debe contar con una VPN en wireguard para transmitir video de forma segura.
+  - **RS_N4** El sistema debe proporcionar una configuración de las redes LAN, para que evitar que las camaras conectadas al router IP sean visibles por alguien externo.   
+  - **RS_N5** El sistema debe validar credenciales de login del protal web a travéz de whitelist y un proxy especialmente configurado.
