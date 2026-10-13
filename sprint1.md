@@ -77,6 +77,19 @@ Se han delimitado también los siguientes requisitos no funcionales.
 - El sistema de login valida todas las entradas de texto antes de procesarlas, bloqueando cualquier intento de inyección SQL.
 - El flujo completo de acceso no excede los pasos estrictamente necesarios (Credenciales + 2FA) sin añadir capas de mas.
 
+###  Transmisión de Video en tiempo real
+- La web muestra la transmisión en vivo de las cámaras integradas de manera ininterrumpida.
+- Las funciones de control PTZ (Pan, Tilt, Zoom) responden correctamente desde la interfaz web para las cámaras compatibles.
+- La transmisión de video hacia el usuario final se realiza de forma segura a través del túnel VPN configurado con WireGuard.
+- Las cámaras IP están configuradas dentro de la red LAN de forma que son inaccesibles públicamente desde el exterior del router.
+
+### Almacenamiento, Consulta y Retención
+- El sistema guarda continuamente las grabaciones de video en el servidor NAS casero configurado.
+- El servidor NAS y la base de datos se encuentran en un entorno físico separado de las sucursales vigiladas.
+- El sistema, mediante un proceso automatizado garantiza la disponibilidad de al menos los últimos 7 días de grabación.
+- Un usuario autorizado puede buscar, visualizar y reproducir una grabación almacenada.
+- Un usuario autorizado puede descargar un fragmento de grabación desde el NAS hacia su almacenamiento local.
+
 ## Responsables
 
   los roles definidos para el proyecto sera:
