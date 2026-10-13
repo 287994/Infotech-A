@@ -59,6 +59,8 @@ Se han delimitado también los siguientes requisitos no funcionales.
     - **Principal actor:** Empleado autorizado
 
 ## Modelo entidad-relación (ER)
+<img width="1200" height="1600" alt="Diagrama" src="https://github.com/user-attachments/assets/beb8de37-e19e-4864-9f8b-02cf4285a206" />
+
 
 ## Historias de usuario
 
