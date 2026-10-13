@@ -70,6 +70,13 @@ Se han delimitado también los siguientes requisitos no funcionales.
 
 ## Criterios de aceptación
 
+### Autenticación y Control de Acceso
+- El sistema permite el inicio de sesión únicamente si las credenciales son correctas y se aprueba el 2FA.
+- El proxy configurado adecuadamente deberá rechazar automáticamente cualquier intento de acceso de usuarios que no estén registrados en la whitelist.
+- el usuario Admin tiene la capacidad de agregar, modificar o eliminar usuarios de la whitelist.
+- El sistema de login valida todas las entradas de texto antes de procesarlas, bloqueando cualquier intento de inyección SQL.
+- El flujo completo de acceso no excede los pasos estrictamente necesarios (Credenciales + 2FA) sin añadir capas de mas.
+
 ## Responsables
 
   los roles definidos para el proyecto sera:
