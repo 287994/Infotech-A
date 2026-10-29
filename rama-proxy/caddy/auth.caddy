@@ -1,0 +1,6 @@
+(auth) {
+	forward_auth login:3000 {
+		uri /api/auth/check
+		copy_headers X-Auth-User X-Auth-Role
+	}
+}

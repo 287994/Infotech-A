@@ -1,0 +1,24 @@
+import whitelist.caddy
+
+import auth.caddy
+
+:80 {
+	encode gzip
+
+	handle /health {
+		respond "ok" 200
+	}
+
+	handle /admin* {
+		import whitelist
+		respond "Zona restringida: acceso permitido" 200
+	}
+
+	handle /app* {
+		respond "Zona de empleados: sin destino configurado" 503
+	}
+
+	handle {
+		respond "Proxy activo, sin destinos configurados" 200
+	}
+}
