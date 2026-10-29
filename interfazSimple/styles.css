@@ -1,0 +1,275 @@
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #1A3C2A;
+}
+
+img{
+  width: 20px;
+  height: 20px;
+}
+
+button{
+  font-family: inherit;
+  font-size: 15px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.encabezado{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #CCF3E4;
+  border-bottom: 4px solid #A7CDBD;
+  padding: 14px 30px;
+}
+
+.datosUsuario{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  p{
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+
+.fotoUsuario{
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #A7CDBD;
+  border: 2px solid #fff;
+  img{
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.rol{
+  display: inline-block;
+  background-color: #fff;
+  font-size: 12px;
+  padding: 2px 10px;
+  margin-top: 3px;
+}
+
+.cerrarSesion{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  border: 1px solid #88AC8F;
+  padding: 8px 12px;
+  &:hover{
+    background-color: #A7CDBD;
+  }
+}
+
+.principal{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px 30px 20px;
+}
+
+.pestanas{
+  display: flex;
+  border-bottom: 1px solid #A7CDBD;
+  margin-bottom: 20px;
+}
+
+.pestana, .pestanaActiva{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 14px 18px;
+  font-weight: bold;
+  color: #5D774B;
+}
+
+.pestanaActiva{
+  color: #1A3C2A;
+  border-bottom-color: #88AC8F;
+}
+
+.enVivo{
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.camaraPrincipal{
+  flex: 2;
+  border: 1px solid #A7CDBD;
+}
+
+.pantalla{
+  position: relative;
+  background-color: #000;
+  aspect-ratio: 16 / 10;
+}
+
+.etiqueta{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #CCF3E4;
+  color: #1A3C2A;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+}
+
+.etiquetaVivo{
+  top: 12px;
+  left: 12px;
+}
+
+.nombreCamara{
+  top: 12px;
+  right: 12px;
+}
+
+.puntoR, .puntoV{
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.puntoR{
+  background-color: #f28b8b;
+}
+
+.puntoV{
+  background-color: #7fcf9b;
+}
+
+.infoCamara{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E8F5E9;
+  padding: 14px 16px;
+  h2{
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+.estado{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #5D774B;
+}
+
+.acciones{
+  display: flex;
+  justify-content: space-around;
+  padding: 14px 10px 18px 10px;
+}
+
+.capturar, .grabar, .pantallaCompleta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: #5D774B;
+  span{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CCF3E4;
+    color: #1A3C2A;
+  }
+  &:hover span{
+    background-color: #A7CDBD;
+  }
+}
+
+.listaCamaras{
+  flex: 1;
+  h3{
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #5D774B;
+  }
+}
+
+.camaras{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tarjeta, .tarjetaSeleccionada{
+  width: 100%;
+  padding: 0;
+  text-align: left;
+  background-color: #fff;
+  border: 2px solid #A7CDBD;
+}
+
+.tarjetaSeleccionada{
+  border-color: #88AC8F;
+}
+
+.miniatura{
+  position: relative;
+  background-color: #000;
+  aspect-ratio: 16 / 10;
+  .etiqueta{
+    top: 8px;
+    left: 8px;
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+}
+
+.infoTarjeta{
+  background-color: #E8F5E9;
+  padding: 9px 12px;
+  b{
+    display: block;
+    font-size: 14px;
+  }
+  small{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #5D774B;
+  }
+}
+
+@media (max-width: 768px){
+  .encabezado{
+    padding: 12px 15px;
+  }
+  .enVivo{
+    flex-direction: column;
+  }
+  .camaraPrincipal, .listaCamaras{
+    width: 100%;
+    flex: none;
+  }
+}
