@@ -1,1 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infotech-A</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="encabezado">
+      <div class="datosUsuario">
+        <div class="fotoUsuario">
+          <img src="./images/usuario.png" alt="usuario" />
+        </div>
+        <div>
+          <p class="nombreUsuario">Usuario</p>
+          <span class="rol">Administrador</span>
+        </div>
+      </div>
+      <button class="cerrarSesion">
+        <img src="./images/cerrarSesion.png" alt="cerrarSesion" />
+        Cerrar sesión
+      </button>
+    </header>
 
+    <main class="principal">
+      <nav class="pestanas">
+        <button class="pestanaActiva">
+          <img src="./images/enVivo.png" alt="enVivo" />
+          En vivo
+        </button>
+        <button class="pestana">
+          <img src="./images/grabaciones.png" alt="grabaciones" />
+          Grabaciones
+        </button>
+      </nav>
+
+      <section class="enVivo">
+        <div class="camaraPrincipal">
+          <div class="pantalla">
+            <span class="etiqueta etiquetaVivo"><i class="puntoR"></i>EN VIVO</span>
+            <span class="etiqueta nombreCamara">Cámara 1</span>
+          </div>
+          <div class="infoCamara">
+            <h2>Cámara 1</h2>
+            <span class="estado"><i class="puntoV"></i>En línea</span>
+          </div>
+          <div class="acciones">
+            <button class="capturar">
+              <span><img src="./images/capturar.png" alt="capturar" /></span>
+              Capturar
+            </button>
+            <button class="grabar">
+              <span><img src="./images/grabar.png" alt="grabar" /></span>
+              Grabar
+            </button>
+            <button class="pantallaCompleta">
+              <span><img src="./images/pantallaCompleta.png" alt="pantallaCompleta" /></span>
+              Pantalla completa
+            </button>
+          </div>
+        </div>
+
+        <aside class="listaCamaras">
+          <h3>Cámaras</h3>
+          <ul class="camaras">
+            <li><button class="tarjetaSeleccionada"><div class="miniatura"><span class="etiqueta etiquetaVivo"><i class="puntoR"></i>EN VIVO</span></div><div class="infoTarjeta"><b>Cámara 1</b><small><i class="puntoV"></i>En línea</small></div></button></li>
+            <li><button class="tarjeta"><div class="miniatura"><span class="etiqueta etiquetaVivo"><i class="puntoR"></i>EN VIVO</span></div><div class="infoTarjeta"><b>Cámara 2</b><small><i class="puntoV"></i>En línea</small></div></button></li>
+            <li><button class="tarjeta"><div class="miniatura"><span class="etiqueta etiquetaVivo"><i class="puntoR"></i>EN VIVO</span></div><div class="infoTarjeta"><b>Cámara 3</b><small><i class="puntoV"></i>En línea</small></div></button></li>
+            <li><button class="tarjeta"><div class="miniatura"><span class="etiqueta etiquetaVivo"><i class="puntoR"></i>EN VIVO</span></div><div class="infoTarjeta"><b>Cámara 4</b><small><i class="puntoV"></i>En línea</small></div></button></li>
+            <li><button class="tarjeta"><div class="miniatura"><span class="etiqueta etiquetaVivo"><i class="puntoR"></i>EN VIVO</span></div><div class="infoTarjeta"><b>Cámara 5</b><small><i class="puntoV"></i>En línea</small></div></button></li>
+            <li><button class="tarjeta"><div class="miniatura"><span class="etiqueta etiquetaVivo"><i class="puntoR"></i>EN VIVO</span></div><div class="infoTarjeta"><b>Cámara 6</b><small><i class="puntoV"></i>En línea</small></div></button></li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
