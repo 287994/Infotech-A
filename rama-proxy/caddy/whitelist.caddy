@@ -1,0 +1,5 @@
+
+(whitelist) {
+	@fuera_de_whitelist not remote_ip 127.0.0.1/32 10.10.0.0/24 10.10.10.0/24
+	respond @fuera_de_whitelist "Acceso denegado" 403
+}
