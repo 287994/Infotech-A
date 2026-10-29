@@ -1,0 +1,8 @@
+[
+  {
+    "username": "prueba",
+    "passwordHash": "$2a$12$wbUpM5h0v8/DJrDG5.b4/.lhSr9x2QR0DABXbQRhRzzv62lLVcfN.",
+    "role": "employee",
+    "active": true
+  }
+]
